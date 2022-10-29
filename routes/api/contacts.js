@@ -14,8 +14,6 @@ router.post("/", validateMiddleware, ctrl.addContact);
 
 router.delete("/:contactId", ctrl.removeContact);
 
-router.put("/:contactId", async (req, res, next) => {
-  res.json({ message: "template message" });
-});
+router.put("/:contactId", validateMiddleware, ctrl.updateContact);
 
 module.exports = router;
