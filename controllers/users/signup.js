@@ -35,6 +35,7 @@ const signup = async (req, res) => {
         email,
         subscription,
         avatarURL,
+        verificationToken,
       },
     },
   });
